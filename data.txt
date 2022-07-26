@@ -1,0 +1,213 @@
+
+
+
+<style>
+
+
+table, th, td {
+  border:2px solid green;
+}
+</style>
+
+<style>
+h1 {
+  text-shadow: 2px 2px 5px green;
+}
+</style>
+<style>
+h3
+{
+text-shadow: 2px 2px 5px green;
+}
+
+</style>
+<style>
+p
+{text-shadow: 2px 2px 5px yellow;
+}
+</style>
+
+<h1>Data of the Survey and Its Summary </h1>
+</head>
+
+<body background =https://static.vecteezy.com/system/resources/previews/002/326/334/original/gradient-light-color-background-graphic-free-vector.jpg>  
+
+<table style="width:100%">
+
+
+  <tr>
+    <th>SRNO</th>
+    <th>NAME</th>
+    <th>AADHAR_NO</th>				
+    <th>AGE</th> 
+    <th>Locality</th>
+    <th>City</th>		
+  
+    <th>Symptoms</th>
+    <th>RTPCR Positive</th>
+    <th>Recovered/Death</th>	
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Dhruv Patel</td>
+    <td>0000-1111-2222</td>
+    <td>18</td>	
+    <td>Gota</td>
+    <td>Ahemedabad</td>
+    <td>Yes</td>
+    <td>Yes</td>	
+    <td>Recovered</td> 
+ </tr>
+  <tr>
+    <td>2</td>
+    <td>Ramesh Shah</td>
+    <td>1111-1111-2222</td>
+    <td>48</td>	
+    <td>Chandkheda</td>
+    <td>Ahemedabad</td>
+    <td>NO</td>
+    <td>NO</td>	
+    <td>NotApplicable</td> 
+ </tr>
+  <tr>
+    <td>3</td>
+    <td>Rajesh Kumar</td>
+    <td>0000-1111-2452</td>
+    <td>50</td>	
+    <td>Kudasan</td>
+    <td>Gandhinagar</td>
+    <td>Yes</td>
+    <td>Yes</td>	
+    <td>Recovered</td> 
+ </tr>
+  <tr>
+    <td>4</td>
+    <td>Suresh Jain</td>
+    <td>5678-1111-2322</td>
+    <td>30</td>	
+    <td>Patel Colony</td>
+    <td>Jamnagar</td>
+    <td>Yes</td>
+    <td>No</td>	
+    <td>Notapplicable</td> 
+ </tr>
+  <tr>
+    <td>5</td>
+    <td>Rutulrad Jadeja</td>
+    <td>0345-0591-9242</td>
+    <td>56</td>	
+    <td>Kalupur</td>
+    <td>Ahemedabad</td>
+    <td>Yes</td>
+    <td>Yes</td>	
+    <td>Recovered</td> 
+ </tr>
+  <tr>
+    <td>6</td>
+    <td>Rahul Sharma</td>
+    <td>3987-5690-3590</td>
+    <td>31</td>	
+    <td>Vasai</td>
+    <td>Mumbai</td>
+    <td>No</td>
+    <td>No</td>	
+    <td>Not Applicable</td> 
+ </tr>
+
+  <tr>
+    <td>7</td>
+    <td>Ridhi Yadav</td>
+    <td>0442-1242-4498</td>
+    <td>39</td>	
+    <td>Faridabad</td>
+    <td>Delhi</td>
+    <td>Yes</td>
+    <td>Yes</td>	
+    <td>Death</td> 
+ </tr>  
+<tr>
+    <td>8</td>
+    <td>Ruchir Kumar</td>
+    <td>8900-4511-2456</td>
+    <td>23</td>	
+    <td>Dombivali</td>
+    <td>Mumbai</td>
+    <td>Yes</td>
+    <td>Yes</td>	
+    <td>Recovered</td> 
+ </tr>  
+<tr>
+    <td>9</td>
+    <td>Aman Chandila</td>
+    <td>9874-5489-0768</td>
+    <td>28</td>	
+    <td>AirPort</td>
+    <td>Lucknow</td>
+    <td>No</td>
+    <td>No</td>	
+    <td>Not Applicable</td> 
+ </tr>
+
+<tr>
+    <td>10</td>
+    <td>Dhruvesh Shah</td>
+    <td>4327-6789-3478</td>
+    <td>48</td>	
+    <td>Ghatlodiya</td>
+    <td>Ahemedabad</td>
+    <td>No</td>
+    <td>No</td>	
+    <td>Not Applicable</td> 
+ </tr>
+
+
+</table>
+<h3>Some of the Data Summary </h3>
+<p>So as we know if we collect data but we need to do some ananlysis so that We can get some usefull information <br>So simply we can calculate Succeptibility rate from the data we can calculate that it is 60 percent that means<br>from the survey peopled 60 percent people are suffering from symptoms of covid
+<br>Like Succeptliblity we can calculate that how many percent people get infected who <got symtoms which turns out to be 83.33 percent <br>
+And also we can <br>calculate the recovery rate that is 80 percent and death rate of the covid is 20 percentage </p>	
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = [1,2,3,4,5,6,7,8,9,10];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [1,1,2,2,3,3,4,5,5,5],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1,1,2,3,4,4,5,6,6,6],
+      borderColor: "blue",
+      fill: false
+    }, { 
+      data: [1,1,2,2,3,3,3,4,4,4],
+      borderColor: "green",
+      fill: false
+      	
+		   
+
+ }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+<br><p> Red Line is Total Infection<br> Blue Line is Total Symptoms suffering people<br> Green Line is recoverd
+
+<br> Some Graphical Explanation<br> So x-axis is representation of people  participated in the Survey
+<br>Increase in one Y-axis unit is equivalent to get yes in Succeptiblity or Yes in RTPCR Positive or Recorved in the Recovry column
+</p>
+
+</body>
+
+
+
